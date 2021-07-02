@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="textBox9.Text" xml:space="preserve">
+    <value>О легальных моментах
+
+
+Мы - WareHouse, компания, зарегистрированная в Российской Федерации в городе Краснодар. Наш головной офис расположен по адресу Краснодар, ул. Ставропольская 149.
+ 
+Когда вы покупаете у нас, применяются эти правила и условия. Они важны для всех нас, так как указывают, что мы можем ожидать друг от друга, а также предоставляют вам полезную информацию.
+
+Мы часто обновляем эти правила и условия и иногда редактируем их, так что советуем проверять эти страницы перед тем, как оформлять покупки: к вам будет относиться самый новый набор правил и условий.
+
+
+О вас
+
+
+Чтобы делать покупки у нас, вы должны:
+
+● быть не младше 16 лет;
+● иметь кредитную или дебетовую карту, которую мы принимаем (прокрутите эту страницу вниз для подробной информации о текущих платежных провайдерах);
+● иметь право использовать эту кредитную или дебетовую карту (напр. эта карта выпущена на ваше имя, или у вас есть разрешение на ее использование)
+
+
+Размещение заказа
+
+
+Когда вы размещаете заказ, вам должно прийти оповещение на электронную почту, подтверждающее ваш заказ. После этого мы проводим стандартную проверку на предварительное разрешение списания, чтобы убедиться, что у вас достаточно денежных средств на карте.
+
+Мы принимаем ваш заказ только тогда, когда оплата принята и мы списали средства с вашей платежной карты (и тогда создается контракт на основе этих условий).
+
+Вы можете попробовать отменить (не изменить) ваш заказ в течение короткого периода времени – срок зависит от выбранного вами способа доставки (это будет упомянуто в вашем письме с подтверждением). Вы не можете изменить свой заказ, вам нужно будет отменить и/или вернуть первоначальный товар/первоначальные товары, а затем перезаказать нужное.
+
+Все заказы зависят от наличия на складе и подтверждения стоимости заказа. Не беспокойтесь, если с заказом возникнут проблемы, мы свяжемся с вами.
+
+
+Описание и стоимость товаров
+
+
+Здесь в головном офисе WareHouse многое происходит, и иногда наши занятые коллеги могут выставить неверную цену или описать товар или промокод неправильно. Если мы найдем ошибку в любом из заказанных вами товаров, мы немедленно сообщим вам и дадим вам возможность либо заново подтвердить заказ (по верной цене), либо отменить его.
+
+Если мы не сможем связаться с вами, мы расценим этот заказ как отмененный. Если вы решите отменить его и вы уже оплатили покупку, мы полностью вернем вам денежные средства.
+
+Цены включают в себя НДС (где применимо).
+
+В зависимости от стоимости заказа и выбранного способа доставки с вас могут затребовать оплату стоимости доставки (смотрите ниже). Такая дополнительная стоимость будет четко указана при оформлении заказа и будет включена в «Общую Стоимость».
+
+
+
+Доставка
+
+
+Мы очень стараемся укладываться в предложенные сроки доставки, но иногда могут возникать задержки (например, из-за задержек у курьера, логистики или плохой погоды). Мы будем держать вас в курсе в меру своих возможностей, и вы сможете следить за передвижением вашей посылки.
+
+
+Возрат
+
+Мы понимаем, иногда вам что-то не очень нравится и вы хотите получить возврат средств. Не беспокойтесь, если товар остался в первоначальном состоянии, мы бесплатно примем ваш возврат, учитывая указанные ниже правила.
+
+Если вы отправите товар нам обратно с целью вернуть денежные средства в течение 28 дней с момента доставки заказа в пункт назначения, мы оформим полный возврат средств за возвращенный товар на ваш первоначальный способ оплаты.
+
+Если вы отправите товар нам обратно с целью вернуть денежные средства в течение 29-45 дней с момента доставки заказа в пункт назначения, вместо оформления возврата средств мы выдадим вам подарочный сертификат на сумму, эквивалентную той, которую вы заплатили за товар.
+
+Мы стараемся оформлять все возвраты средств в течение 14 дней с момента получения возвращенного товара на складе.
+
+Если в указанные выше сроки вы захотите получить возврат средств за товар, который по какой-то причине не можете вернуть нам, пожалуйста, свяжитесь с нами. В этом случае любой возврат средств осуществляется по нашему усмотрению.
+
+</value>
+  </data>
+  <metadata name="Local_Order_User_ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Local_Order_User_Order.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Local_Order_User_Price.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Local_Order_User_Count.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Local_Order_Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Статус.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="usersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>564, 134</value>
+  </metadata>
+  <metadata name="dBInternetStoreBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>154, 17</value>
+  </metadata>
+  <metadata name="dBInternetStore.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="pointIssueBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>197, 134</value>
+  </metadata>
+  <metadata name="dBInternetStoreDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 134</value>
+  </metadata>
+  <metadata name="NumberOrder.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Pay.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DataCreditCard.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Kolichestvo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Delivery.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Доставлено.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="orderBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1196, 95</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn19.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="appliancesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>200, 95</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn14.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="sportBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>570, 95</value>
+  </metadata>
+  <metadata name="Количество.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="electronicsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1243, 56</value>
+  </metadata>
+  <metadata name="cosmeticsBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1053, 56</value>
+  </metadata>
+  <metadata name="clothesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>884, 17</value>
+  </metadata>
+  <metadata name="accessoriesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>507, 17</value>
+  </metadata>
+  <metadata name="Nomerzakaza.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Statuszakaza.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="orderBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>986, 134</value>
+  </metadata>
+  <metadata name="cosmeticsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>869, 56</value>
+  </metadata>
+  <metadata name="orderBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>882, 95</value>
+  </metadata>
+  <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>876, 134</value>
+  </metadata>
+  <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>370, 17</value>
+  </metadata>
+  <metadata name="cosmeticsLocalOrderUserBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>385, 56</value>
+  </metadata>
+  <metadata name="accessoriesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>698, 17</value>
+  </metadata>
+  <metadata name="clothesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1053, 17</value>
+  </metadata>
+  <metadata name="cosmeticsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <metadata name="local_Order_UserTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>653, 56</value>
+  </metadata>
+  <metadata name="electronicsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <metadata name="appliancesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>388, 95</value>
+  </metadata>
+  <metadata name="sportTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>729, 95</value>
+  </metadata>
+  <metadata name="orderTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1042, 95</value>
+  </metadata>
+  <metadata name="pointIssueTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>383, 134</value>
+  </metadata>
+  <metadata name="usersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>723, 134</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>43</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICQAAAEAIAC4EgAAFgAAACgAAAAgAAAASAAAAAEAIAAAAAAAABIAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e1F7e3tr+3t7fHt7e3q7e3tju3t7RHt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QAAAAAA7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e1i7e3t6O3t7f/t7e3/7e3t/+3t7f/t7e3/7e3t/+3t7Y/t7e0M7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAAAAAADt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e1Q7e3t6u3t7f/t7e3/7e3t1O3t7VLt7e0d7e3tOu3t7bHt7e3/7e3t/+3t
+        7f7t7e2D7e3tA+3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0AAAAAAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0q7e3tz+3t7f/t7e3/7e3t1e3t7UHt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7Tzt7e3e7e3t/+3t7f/t7e3y7e3tYe3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QAAAAAA7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0N7e3tp+3t7f/t7e3/7e3t5u3t7Unt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e1l7e3t+O3t7f/t7e3/7e3t4e3t7ULt7e0A7e3tAO3t7QDt7e0A7e3tAAAA
+        AADt7e0A7e3tAO3t7QDt7e0A7e3tau3t7f7t7e3/7e3t++3t7Wzt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0G7e3tke3t7f/t7e3/7e3t/+3t7bjt7e0V7e3tAO3t
+        7QDt7e0AAAAAAO3t7QDt7e0A7e3tLe3t7dvt7e3/7e3t/+3t7Z7t7e0F7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tGO3t7bHt7e3/7e3t/+3t
+        7f/t7e1s7e3tAO3t7QAAAAAA7e3tAO3t7U/t7e3/7e3t/+3t7eDt7e0z7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7S3t7e3H7e3t/+3t7f/t7e2X7e3tAAAAAADt7e0R7e3t8e3t7f/t7e2S7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e1c7e3t/+3t7f/t7e1bAAAAAO3t7W3t7e3/7e3tpe3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e2L7e3t/+3t7agAAAAA7e3tt+3t7f/t7e1G7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e1L7e3toO3t7Rjt7e0A7e3tAO3t7QDt7e0A7e3tV+3t
+        7bPt7e0g7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7Tft7e3/7e3t0gAAAADt7e3f7e3t/+3t
+        7Szt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3taO3t7f/t7e3/7e3t8O3t7Srt7e0A7e3tAO3t
+        7Y/t7e3/7e3t/+3t7e/t7e0p7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tGO3t7f/t7e3kAAAAAO3t
+        7evt7e3/7e3tI+3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7Wzt7e3/7e3t/+3t7f/t7e3/7e3t9u3t
+        7Qzt7e1c7e3t/+3t7f/t7e3/7e3t/+3t7e3t7e0X7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0R7e3t/+3t
+        7ecAAAAA7e3t8O3t7f/t7e0c7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0x7e3t/+3t7f/t7e2n7e3tRO3t
+        7fjt7e3/7e3t7e3t7fLt7e3/7e3tve3t7Ybt7e3/7e3t/+3t7bDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7RXt7e3/7e3t5wAAAADt7e3y7e3t/+3t7Rbt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7aXt7e3/7e3t/+3t
+        7Sjt7e0A7e3tQO3t7f/t7e3/7e3t/+3t7f/t7e0r7e3tAO3t7bDt7e3/7e3t/+3t7VTt7e0A7e3tAO3t
+        7QDt7e0A7e3tGu3t7f/t7e3oAAAAAO3t7fLt7e3/7e3tEe3t7QDt7e0A7e3tAO3t7QDt7e0R7e3t8u3t
+        7f/t7e2V7e3tAO3t7QDt7e0A7e3tge3t7f/t7e3/7e3tme3t7QDt7e0A7e3tLe3t7f/t7e3/7e3tzO3t
+        7QDt7e0A7e3tAO3t7QDt7e0d7e3t/+3t7eoAAAAA7e3t8e3t7f/t7e0O7e3tAO3t7QDt7e0A7e3tAO3t
+        7U3t7e3/7e3t/+3t7Ubt7e0A7e3tAO3t7QDt7e2E7e3t/+3t7f/t7e077e3tAO3t7QDt7e0A7e3tuu3t
+        7f/t7e3/7e3tOu3t7QDt7e0A7e3tAO3t7Rzt7e3/7e3t7QAAAADt7e3u7e3t/+3t7Qzt7e0A7e3tAO3t
+        7QDt7e0A7e3thu3t7f/t7e387e3tGu3t7QDt7e0A7e3tAO3t7a3t7e3/7e3t8e3t7Q7t7e0A7e3tAO3t
+        7QDt7e2E7e3t/+3t7f/t7e1t7e3tAO3t7QDt7e0A7e3tGu3t7f/t7e3vAAAAAO3t7ert7e3/7e3tC+3t
+        7QDt7e0A7e3tAO3t7QDt7e247e3t/+3t7eLt7e0B7e3tAO3t7QDt7e0A7e3tze3t7f/t7e3Z7e3tAO3t
+        7QDt7e0A7e3tAO3t7Vvt7e3/7e3t/+3t7ZDt7e0A7e3tAO3t7QDt7e0Z7e3t/+3t7fAAAAAA7e3t5O3t
+        7f/t7e0M7e3tAO3t7QDt7e0A7e3tAu3t7eLt7e3/7e3ty+3t7QDt7e0A7e3tAO3t7QDt7e3Y7e3t/+3t
+        7crt7e0A7e3tAO3t7QDt7e0A7e3tN+3t7f/t7e3/7e3tqu3t7QDt7e0A7e3tAO3t7Rjt7e3/7e3t8QAA
+        AADt7e3d7e3t/+3t7Q/t7e0A7e3tAO3t7QDt7e0i7e3t/+3t7f/t7e2w7e3tAO3t7QDt7e0A7e3tAO3t
+        7cXt7e3/7e3tze3t7QDt7e0A7e3tAO3t7QDt7e0Z7e3t++3t7f/t7e3F7e3tAO3t7QDt7e0A7e3tG+3t
+        7f/t7e3vAAAAAO3t7dPt7e3/7e3tGO3t7QDt7e0A7e3tAO3t7U3t7e3/7e3t/+3t7Xjt7e0A7e3tAO3t
+        7QDt7e0A7e3tYe3t7f/t7e3p7e3tAe3t7QDt7e0A7e3tAO3t7QDt7e3a7e3t/+3t7eTt7e0D7e3tAO3t
+        7QDt7e0k7e3t/+3t7eoAAAAA7e3tvO3t7f/t7e0w7e3tAO3t7QDt7e0A7e3tTO3t7evt7e2M7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tMu3t7Wzt7e0I7e3tAO3t7QDt7e0A7e3tAO3t7Szt7e3e7e3t/e3t
+        7Rrt7e0A7e3tAO3t7Tbt7e3/7e3t2gAAAADt7e2G7e3t/+3t7YLt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0T7e3tCe3t7QDt7e0A7e3tcO3t7f/t7e2oAAAAAO3t7S/t7e3/7e3t/+3t7Vft7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7TPt7e3/7e3t/+3t7T4AAAAA7e3tAO3t7XXt7e3/7e3t/+3t
+        7Z/t7e0B7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e137e3t/+3t7f/t7e167e3tAAAAAADt7e0A7e3tAO3t
+        7Vft7e397e3t/+3t7fbt7e1m7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0+7e3t4e3t7f/t7e3/7e3tXO3t7QDt7e0AAAAAAO3t
+        7QDt7e0A7e3tAO3t7Qbt7e2b7e3t/+3t7f/t7e3r7e3tWe3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0k7e3tyO3t7f/t7e3/7e3tqu3t7Qnt7e0A7e3tAO3t
+        7QAAAAAA7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0l7e3tyO3t7f/t7e3/7e3t3+3t7T/t7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0N7e3to+3t7f/t7e3/7e3t3u3t7Tbt7e0A7e3tAO3t
+        7QDt7e0A7e3tAAAAAADt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tQe3t7eDt7e3/7e3t/+3t
+        7cHt7e0g7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tfe3t7f/t7e3/7e3t9e3t7Vzt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0AAAAAAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7WTt7e317e3t/+3t7f/t7e2l7e3tR+3t7Sft7e0c7e3tW+3t7ent7e3/7e3t/+3t7Yft7e0C7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QAAAAAA7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QHt7e1/7e3t/+3t7f/t7e3/7e3t/+3t7f/t7e3/7e3t/+3t7Zvt7e0N7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAAAAAADt7e0A7e3tAO3t7QDt7e0A7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0P7e3tie3t7d7t7e3v7e3t3O3t7ZDt7e0W7e3tAO3t
+        7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0A7e3tAO3t7QDt7e0AAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD////////////8
+        D///8AP//8AA//8D4H/8D/gf+D/8B+B//wPB///Bh///8I////iP8eP4j+DB+I/AAPiPgAD4j4QIeI8O
+        GHiPDhw4jw4cOI8OPDiOHjw4jh48OI4eHhiOPx4Yj///mIf///DB///h4P//g/A//gf8D/gf/wPwf//A
+        AP//4AP///gP//////8=
+</value>
+  </data>
+</root>

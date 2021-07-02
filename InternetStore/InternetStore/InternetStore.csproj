@@ -1,0 +1,859 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6F38979-A674-4FE5-80E4-E6070924CF7B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>InternetStore</RootNamespace>
+    <AssemblyName>InternetStore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.25\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.25\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.25\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataUser.cs" />
+    <Compile Include="DBInternetStore.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBInternetStore.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBInternetStoreDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBInternetStoreDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegesterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegesterForm.Designer.cs">
+      <DependentUpon>RegesterForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegesterForm.resx">
+      <DependentUpon>RegesterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DBInternetStore.xsc">
+      <DependentUpon>DBInternetStore.xsd</DependentUpon>
+    </None>
+    <None Include="DBInternetStore.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBInternetStore.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBInternetStore.xss">
+      <DependentUpon>DBInternetStore.xsd</DependentUpon>
+    </None>
+    <None Include="DBInternetStoreDataSet.xsc">
+      <DependentUpon>DBInternetStoreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBInternetStoreDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBInternetStoreDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBInternetStoreDataSet.xss">
+      <DependentUpon>DBInternetStoreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBInternetStore.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DBInternetStore_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DBInternetStore.mdf</DependentUpon>
+    </Content>
+    <Content Include="Images\Accessories.png" />
+    <Content Include="Images\Animal.png" />
+    <Content Include="Images\appliances.png" />
+    <Content Include="Images\Bascket.png" />
+    <Content Include="Images\Book.png" />
+    <Content Include="Images\Car.png" />
+    <Content Include="Images\Catalog.png" />
+    <Content Include="Images\ChildToy.png" />
+    <Content Include="Images\clothes.png" />
+    <Content Include="Images\Cosmetics.png" />
+    <Content Include="Images\Electronics.png" />
+    <Content Include="Images\Exit.png" />
+    <Content Include="Images\heart.png" />
+    <Content Include="Images\Help.png" />
+    <Content Include="Images\Home.png" />
+    <Content Include="Images\icon11.ico" />
+    <Content Include="Images\iconsssmaaal.png" />
+    <Content Include="Images\Info.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logoblack.png" />
+    <Content Include="Images\logosmall.png" />
+    <Content Include="Images\logotext.png" />
+    <Content Include="Images\logotextsmal.png" />
+    <Content Include="Images\Settings.png" />
+    <Content Include="Images\Sport.png" />
+    <Content Include="Images\Support.png" />
+    <Content Include="Images\User.png" />
+    <None Include="Resources\Популярная техника1.jpg" />
+    <None Include="Resources\Попульрные футболки1.jpg" />
+    <None Include="Resources\Попульрные камеры1.jpg" />
+    <None Include="Resources\Кофемашина Philips EP324370 Wt белый.jpg" />
+    <None Include="Resources\Кофемашина Philips EP203540 черный.png" />
+    <None Include="Resources\Кофемашина Nivona NICR 841 черный.jpg" />
+    <None Include="Resources\Кофемашина Nivona CafeRomatica NICR 779 белый.jpg" />
+    <None Include="Resources\Кофемашина Melitta F 530-102 черный.jpg" />
+    <None Include="Resources\Кофемашина Krups EA829E10 серебристый.jpg" />
+    <None Include="Resources\Кофемашина Jura ENA 8 красный.jpg" />
+    <None Include="Resources\Кофемашина Gaggia Naviglio Deluxe Silver серебристый.jpg" />
+    <None Include="Resources\Кофемашина Delonghi ECAM 250.23.SB серебристый.jpg" />
+    <None Include="Resources\Кофемашина Delonghi ECAM 22.114.B черный.jpg" />
+    <None Include="Resources\Блендер Scarlett SC-HB42M33 белый.png" />
+    <None Include="Resources\Блендер Scarlett SC-HB42F60 белый.jpg" />
+    <None Include="Resources\Блендер Scarlett SC-HB42F56 черный.jpg" />
+    <None Include="Resources\Блендер Redmond RHB-2981 черный.jpg" />
+    <None Include="Resources\Блендер Polaris PHB 1397 черный.jpg" />
+    <None Include="Resources\Блендер Philips HR264200 белый.jpg" />
+    <None Include="Resources\Блендер Moulinex DD641132 белый.jpg" />
+    <None Include="Resources\Блендер Bosch MSM2650B черный.jpg" />
+    <None Include="Resources\Блендер Bosch MS8CM6190 серебристый.jpg" />
+    <None Include="Resources\Блендер Bosch MS6CA4150 белый.jpg" />
+    <None Include="Resources\Стирально-сушильная машина LG F2V5NG0W.jpg" />
+    <None Include="Resources\Стиральная машина Samsung WW65K42E08WDLP.jpg" />
+    <None Include="Resources\Стиральная машина LG FH0B8LD6.jpg" />
+    <None Include="Resources\Стиральная машина LG F1296NDS1slide 1 to 9 of 12.jpg" />
+    <None Include="Resources\Стиральная машина LG F1296HDS3.jpg" />
+    <None Include="Resources\Стиральная машина LG F12B8WDS7.jpg" />
+    <None Include="Resources\Стиральная машина LG F2M5HS6S.jpg" />
+    <None Include="Resources\Стиральная машина Indesit IWUD 4085 %28CIS%29.jpg" />
+    <None Include="Resources\Стиральная машина Indesit BWSA 61051 Sslide 1 to 9 of 10.jpg" />
+    <None Include="Resources\Стиральная машина Candy Smart CSS34 1062D1-07.jpg" />
+    <None Include="Resources\Холодильник с морозильником LG GA-B509CAZL серебристый.jpg" />
+    <None Include="Resources\Холодильник с морозильником LG GA-B459CQWL белый.jpg" />
+    <None Include="Resources\Холодильник с морозильником LG GA-B459CLWL серебристый.jpg" />
+    <None Include="Resources\Холодильник с морозильником Indesit ITR 5200 X серебристый.jpg" />
+    <None Include="Resources\Холодильник с морозильником INDESIT DSN 18 белый.jpg" />
+    <None Include="Resources\Холодильник с морозильником INDESIT DFN 18 D белый.jpg" />
+    <None Include="Resources\Холодильник с морозильником DEXP TF275D белый.jpg" />
+    <None Include="Resources\Холодильник с морозильником BEKO RCNK310KC0W белый.jpg" />
+    <None Include="Resources\Холодильник с морозильником BEKO CNKDN6335KC0W белый.jpg" />
+    <None Include="Resources\Холодильник компактный DEXP RF-SD090MAW белый.jpg" />
+    <None Include="Resources\Масляный радиатор Zanussi LOFT ZOHLT-07W белый.jpg" />
+    <None Include="Resources\Масляный радиатор Hyundai H-HO-9-09-UI848 белый.jpg" />
+    <None Include="Resources\Масляный радиатор Hyundai H-HO-9-07-UI847 белый.jpg" />
+    <None Include="Resources\Масляный радиатор Electrolux Sport Line EOHM-5221N белый.png" />
+    <None Include="Resources\Масляный радиатор Electrolux Line EOHM - 7157 белый.jpg" />
+    <None Include="Resources\Масляный радиатор Ballu Turbo BOHTB- 07FH белый.jpg" />
+    <None Include="Resources\Масляный радиатор Ballu Great BOHGT-11W 2200 белый.jpg" />
+    <None Include="Resources\Масляный радиатор Ballu Classic BOHCL-09WRN белый.jpeg" />
+    <None Include="Resources\Масляный радиатор Ballu Classic BOHCL-07WRN белый.jpg" />
+    <None Include="Resources\Масляный радиатор Aceline OL-2009B черный.jpg" />
+    <None Include="Resources\Блендеры.png" />
+    <None Include="Resources\Холодильники.jpg" />
+    <None Include="Resources\Стиральные машины.jpg" />
+    <None Include="Resources\Обогреватели.jpg" />
+    <None Include="Resources\Кофемашины.jpg" />
+    <None Include="Resources\Блендеры.jpg" />
+    <None Include="Resources\Туалетная вода Escentric Molecules Escentric 02, 100 мл.jpg" />
+    <None Include="Resources\Туалетная вода DOLCE &amp; GABBANA 3 L%27Imperatrice, 100 мл.jpg" />
+    <None Include="Resources\Туалетная вода Christian Dior Fahrenheit, 200 мл.jpg" />
+    <None Include="Resources\Туалетная вода Antonio Banderas The Icon, 50 мл.jpg" />
+    <None Include="Resources\Парфюмерная вода Lanvin Eclat d%27Arpege pour Femme, 30 мл.jpg" />
+    <None Include="Resources\Парфюмерная вода Lancome Poeme, 30 мл.jpg" />
+    <None Include="Resources\Парфюмерная вода Lancome La Vie est Belle, 4 мл.jpg" />
+    <None Include="Resources\Парфюмерная вода Lancome Idole, 25 мл.jpg" />
+    <None Include="Resources\Парфюмерная вода LACOSTE Lacoste pour Femme, 30 мл.jpg" />
+    <None Include="Resources\Парфюмерная вода GIVENCHY L%27Interdit %282018%29.jpg" />
+    <None Include="Resources\Sim Sensitive System 4 Тоник терапевтический Climbazole Scalp Tonic T, 100 мл.jpg" />
+    <None Include="Resources\Sim Sensitive System 4 Маска терапевтическая Oil Cure Hair Mask О, 100 мл.jpg" />
+    <None Include="Resources\Sim Sensitive System 4 Биоботаническая сыворотка Bio Botanical Serum, 100 мл.jpg" />
+    <None Include="Resources\Masil Маска-филлер для волос 8 Seconds Salon Hair Mask, 200 мл.jpg" />
+    <None Include="Resources\La%27dor Маска для сухих и поврежденных волос Hydro LPP Treatment, 530 мл.jpg" />
+    <None Include="Resources\Kapous Professional Профессиональный уход Сыворотка увлажняющая.jpg" />
+    <None Include="Resources\GARNIER Маска 3 в 1 для очень сухих волос Fructis SuperFood Банан, 390 мл.jpg" />
+    <None Include="Resources\GARNIER Комплексный несмываемый уход Fructis SOS Спасатель волос 10 в 1, 400 мл.jpg" />
+    <None Include="Resources\Constant Delight Эликсир для волос 12 в 1, 200 мл.jpg" />
+    <None Include="Resources\Cafe mimi Экспресс-маска для волос для восстановления поврежденных волос.jpg" />
+    <None Include="Resources\Молочко для автозагара GARNIER Ambre Solaire для лица и тела Ровный загар 150 мл1.jpg" />
+    <None Include="Resources\Крем-мыло кусковое Dove Красота и уход, 100 г1.jpg" />
+    <None Include="Resources\Крем-гель для душа Nivea Абрикос, 250 мл1.jpg" />
+    <None Include="Resources\Гель-крем для душа Palmolive Натурэль Интенсивное увлажнение, 250 мл1.jpg" />
+    <None Include="Resources\Гель для тела Holika Holika Aloe 99%25 Soothing Gel универсальный несмываемый, 55 мл1.jpg" />
+    <None Include="Resources\Гель для душа Nivea Men Сила угля, 250 мл1.jpeg" />
+    <None Include="Resources\Гель для душа 3 в 1 Fa Men Энергия Полинезии Свежесть грозы, 250 мл1.jpg" />
+    <None Include="Resources\ItalWax Пленочный воск Full Body wax в гранулах 1000 г1.jpg" />
+    <None Include="Resources\GARNIER Ambre Solaire молочко после загара с алоэ вера 200 мл1.jpg" />
+    <None Include="Resources\Dove антиперспирант, спрей, Nourishing Secrets Ритуал красоты Пробуждение, 150 мл1.jpg" />
+    <None Include="Resources\Молочко для автозагара GARNIER Ambre Solaire для лица и тела Ровный загар 150 мл.jpg" />
+    <None Include="Resources\Крем-мыло кусковое Dove Красота и уход, 100 г.jpg" />
+    <None Include="Resources\Крем-гель для душа Nivea Абрикос, 250 мл.jpg" />
+    <None Include="Resources\Гель-крем для душа Palmolive Натурэль Интенсивное увлажнение, 250 мл.jpg" />
+    <None Include="Resources\Гель для тела Holika Holika Aloe 99%25 Soothing Gel универсальный несмываемый, 55 мл.jpg" />
+    <None Include="Resources\Гель для душа Nivea Men Сила угля, 250 мл.jpeg" />
+    <None Include="Resources\Гель для душа 3 в 1 Fa Men Энергия Полинезии Свежесть грозы, 250 мл.jpg" />
+    <None Include="Resources\ItalWax Пленочный воск Full Body wax в гранулах 1000 г.jpg" />
+    <None Include="Resources\GARNIER Ambre Solaire молочко после загара с алоэ вера 200 мл.jpg" />
+    <None Include="Resources\Dove антиперспирант, спрей, Nourishing Secrets Ритуал красоты Пробуждение, 150 мл.jpg" />
+    <None Include="Resources\Слайдер-дизайн для ногтей.jpg" />
+    <None Include="Resources\Профессиональный маникюрно-педикюрный набор Planta PL-MAN10, 7 насадок, 5 скоростей, подсветка.jpg" />
+    <None Include="Resources\Палочки апельсиновые для маникюра  маникюрные палочки 100шт.jpg" />
+    <None Include="Resources\Лак Essie Nail Lacquer, 13.5 мл, 48 изысканный смокинг.png" />
+    <None Include="Resources\Гель-лак для ногтей Runail Professional Liker, 9 мл, 4520.jpg" />
+    <None Include="Resources\Гель-лак для ногтей Arbix Classic, 10 мл, 064 Симфония любви.jpg" />
+    <None Include="Resources\Гель-лак для ногтей ADRICOCO Gel Polish, 8 мл, 056 светло-бежевый.jpg" />
+    <None Include="Resources\Nano Professional базовое покрытие NANLAC Gum 15 мл прозрачный.jpg" />
+    <None Include="Resources\IQ BEAUTY базовое покрытие Rubber Base Coat + Ca камуфлирующее 10 мл сливочный пломбир.jpg" />
+    <None Include="Resources\Essie базовое покрытие All In One Base 13.5 мл прозрачный.jpg" />
+    <None Include="Resources\Карандаш для бровей Stellary коричневый.jpeg" />
+    <None Include="Resources\Pupa Luminys пудра компактная запеченная Silky Baked Face Powder.png" />
+    <None Include="Resources\Poetea Набор для контуринга Contour Duet.jpg" />
+    <None Include="Resources\Poetea Консилер Party Cover Stick.jpg" />
+    <None Include="Resources\Maybelline New York Face Studio Хайлайтер Shimmer Highlight.jpg" />
+    <None Include="Resources\MAKEOVER Румяна Single Blush.png" />
+    <None Include="Resources\Lancome Тональный крем Skin Feels Good, 32 мл.jpg" />
+    <None Include="Resources\GARNIER BB крем-ролик для кожи вокруг глаз Секрет совершенства, 7 мл.jpg" />
+    <None Include="Resources\Enough Тональный крем Collagen Moisture Foundation SPF 15, 100 мл.jpg" />
+    <None Include="Resources\BE I Масло-праймер Primer Make Up Face Oil 30 мл.jpg" />
+    <None Include="Resources\Уход за волосами.jpg" />
+    <None Include="Resources\Парфюмерия.jpg" />
+    <None Include="Resources\Для маникюра и педикюра.jpg" />
+    <None Include="Resources\Для макияжа.png" />
+    <None Include="Resources\Для ванны и душа.jpg" />
+    <None Include="Resources\Управляемое реле Ajax Relayslide 1 to 4 of 4.jpg" />
+    <None Include="Resources\Пульт управления Ajax SpaceControl.jpg" />
+    <None Include="Resources\Модуль интеграции Ajax Transmitter.jpg" />
+    <None Include="Resources\Датчик утечки газа GiNZZU HS-S39W2.jpg" />
+    <None Include="Resources\Датчик протечки воды First Alert WA100.jpg" />
+    <None Include="Resources\Датчик открытия Ginzzu HS-S03W.jpg" />
+    <None Include="Resources\Датчик дыма First Alert PR700.jpg" />
+    <None Include="Resources\Брелок-актуатор Viguard KEYFOB F.jpg" />
+    <None Include="Resources\Центр управления умным домом Sibling Powernet-ZGW.jpg" />
+    <None Include="Resources\Проходной соединительный адаптер RJ45 Ugreen 20390.jpg" />
+    <None Include="Resources\Проходной соединительный адаптер RJ45 FinePower RJ45 кат. 5e %288P8C%29.jpg" />
+    <None Include="Resources\Настенная розетка RJ45 FinePower RJ45.jpg" />
+    <None Include="Resources\Модуль Keystone Lanmaster TWT-OK45STP5E-WH.jpg" />
+    <None Include="Resources\Модуль Keystone Hyperline KJNE-8P8C-C6-90-SH-F-WH.jpg" />
+    <None Include="Resources\Модуль Keystone Hyperline KJNE-8P8C-C5e-90-GN.jpg" />
+    <None Include="Resources\Коннектор RJ45 Ugreen 20333.jpg" />
+    <None Include="Resources\Коннектор RJ45 Rexant 06-0082-A10.jpg" />
+    <None Include="Resources\Коннектор RJ45 Lanmaster TWT-PL45-8P8C.jpg" />
+    <None Include="Resources\Изолирующий защитный колпачок RJ45 FinePower RJ45.jpg" />
+    <None Include="Resources\Беспроводной выключатель Yeelight Smart Switch Light YLKG12YL белый.jpg" />
+    <None Include="Resources\Фото-и видеокамеры1.jpg" />
+    <None Include="Resources\Телевизор LED DEXP H32F7000K черный.jpg" />
+    <None Include="Resources\Телевизор LED Xiaomi Mi TV 4S 65 черный.jpg" />
+    <None Include="Resources\Телевизор LED Xiaomi Mi TV 4S 43 серебристый.jpg" />
+    <None Include="Resources\Телевизор LED Xiaomi Mi TV 4A 55 черный.jpg" />
+    <None Include="Resources\Телевизор LED Xiaomi Mi TV 4A 43 черный.jpeg" />
+    <None Include="Resources\Телевизор LED Samsung UE50TU8500UXRU черный.jpg" />
+    <None Include="Resources\Телевизор LED Samsung UE43TU7002UXRU черный.jpg" />
+    <None Include="Resources\Телевизор LED LG 65UN73506LB серый.png" />
+    <None Include="Resources\Телевизор LED LG 55NANO866NA черный.jpg" />
+    <None Include="Resources\Телевизор LED DEXP H32F8000Q черный.jpg" />
+    <None Include="Resources\Ноутбук MSI GF75 10UEK-047RU черный.jpg" />
+    <None Include="Resources\Ноутбук Lenovo IdeaPad 5 14ARE05 серый.jpg" />
+    <None Include="Resources\Ноутбук Lenovo IdeaPad 3 Gaming 15ARH05 черный.jpg" />
+    <None Include="Resources\Ноутбук Lenovo IdeaPad 3 15ARE05 серый.jpg" />
+    <None Include="Resources\Ноутбук Honor MagicBook Pro HLYL-WFQ9 серый.jpg" />
+    <None Include="Resources\Ноутбук ASUS TUF Gaming FX706LI-H7057T черный.jpg" />
+    <None Include="Resources\Ноутбук ASUS Laptop D509DA-BQ053 серебристый.jpg" />
+    <None Include="Resources\Ноутбук Apple MacBook Air серый.jpg" />
+    <None Include="Resources\Ноутбук Acer TravelMate B1 TMB118-M-C0EA черный.jpg" />
+    <None Include="Resources\Ноутбук Acer Nitro 5 AN515-45-R4SB черный.jpg" />
+    <None Include="Resources\Камера со сменной оптикой Sony Alpha ILCE-7M3K Kit 28-70mm черный.jpg" />
+    <None Include="Resources\Камера со сменной оптикой Sony Alpha ILCE-7M3 Body черный.jpg" />
+    <None Include="Resources\Камера со сменной оптикой Panasonic Lumix DMC-GX80 черный.jpg" />
+    <None Include="Resources\Камера со сменной оптикой Panasonic Lumix DC-GX880 kit 12-32mm серебристый.jpg" />
+    <None Include="Resources\Камера со сменной оптикой Olympus PEN E-PL9 Pancake Kit 14-42mm EZ белый.jpg" />
+    <None Include="Resources\Камера со сменной оптикой Nikon Z 5 Body + переходник байонета FTZ черный.jpg" />
+    <None Include="Resources\Камера со сменной оптикой Fujifilm X-A5 Kit 24-75mm серый.jpg" />
+    <None Include="Resources\Камера со сменной оптикой Fujifilm X-A5 Kit 15-45mm серый.jpg" />
+    <None Include="Resources\Камера со сменной оптикой Canon EOS R6 kit RF 24-105 F4-7.1 IS STM черный.jpg" />
+    <None Include="Resources\Камера со сменной оптикой Canon EOS M50 Kit 15-45mm IS STM черный.jpg" />
+    <None Include="Resources\Смартфон Xiaomi Redmi 9A 32 ГБ зеленый.jpg" />
+    <None Include="Resources\Смартфон Samsung Galaxy S21 128 ГБ серый.jpg" />
+    <None Include="Resources\Смартфон Samsung Galaxy Note 20 Ultra 256 ГБ черный.jpg" />
+    <None Include="Resources\Смартфон Samsung Galaxy A72 128 ГБ черный.jpg" />
+    <None Include="Resources\Смартфон Samsung Galaxy A52 256 ГБ фиолетовый.jpg" />
+    <None Include="Resources\Смартфон Samsung Galaxy A51 128 ГБ красный.jpg" />
+    <None Include="Resources\Смартфон Samsung Galaxy A51 64 ГБ белый.jpg" />
+    <None Include="Resources\Смартфон realme C21 64 ГБ черный.jpg" />
+    <None Include="Resources\Смартфон POCO X3 Pro 256 ГБ синий.jpg" />
+    <None Include="Resources\Смартфон Apple iPhone 11 128 ГБ черный.jpg" />
+    <None Include="Resources\Радиочастотные наушники PlayStation PULSE 3D белый.jpg" />
+    <None Include="Resources\Проводная гарнитура Logitech G PRO X черный.jpg" />
+    <None Include="Resources\Проводная гарнитура HyperX Cloud Core 7.1 HX-HSCC-2-BK черный.jpg" />
+    <None Include="Resources\Наушники TWS Xiaomi Mi True Wireless Earbuds Basic 2 черный.jpg" />
+    <None Include="Resources\Наушники TWS Samsung Galaxy Buds+ черный.jpg" />
+    <None Include="Resources\Наушники TWS Samsung Galaxy Buds Live черный.jpg" />
+    <None Include="Resources\Наушники TWS Realme Buds Air Neo белый.jpg" />
+    <None Include="Resources\Наушники TWS Apple AirPods Pro белый.jpg" />
+    <None Include="Resources\Наушники TWS Apple Airpods %28MV7N2RUA%29 белый.jpg" />
+    <None Include="Resources\Наушники TWS Apple Airpods %28MRXJ2RUA%29 белый.jpg" />
+    <None Include="Resources\Фото-и видеокамеры.jpg" />
+    <None Include="Resources\Телевизоры.jpg" />
+    <None Include="Resources\Смартфоны.jpg" />
+    <None Include="Resources\Сетевое оборудование.jpg" />
+    <None Include="Resources\Оборудование для дома.jpg" />
+    <None Include="Resources\Ноутбуки.jpeg" />
+    <None Include="Resources\Гарнитуры и наушники.jpg" />
+    <None Include="Resources\Шлем Uvex hlmt 600 visor черный.jpg" />
+    <None Include="Resources\Шлем Termit Basis черный.jpg" />
+    <None Include="Resources\Шлем Salomon DRIVER Dr. черный.jpg" />
+    <None Include="Resources\Горные лыжи Volkl Rise Above 88 размер 163-177.jpg" />
+    <None Include="Resources\Горные лыжи Volkl Bash 81 размер 168-178.jpg" />
+    <None Include="Resources\Горные лыжи + крепления Salomon SMAX 12 + Z12 GW размер 175.jpg" />
+    <None Include="Resources\Горные лыжи + крепления BLIZZARD FIREBIRD SRC размер 175.jpg" />
+    <None Include="Resources\Ботинки горнолыжные Tecnica MACH SPORT HV 100.jpg" />
+    <None Include="Resources\Ботинки горнолыжные Tecnica MACH SPORT HV 70.jpg" />
+    <None Include="Resources\Ботинки горнолыжные Atomic HAWX PRIME 130 S.jpg" />
+    <None Include="Resources\Сноуборд женский Termit Aura.jpg" />
+    <None Include="Resources\Сноуборд женский CAPITA SPACE METAL FANTASY.jpg" />
+    <None Include="Resources\Сноуборд детский Termit Hero.jpg" />
+    <None Include="Resources\Сноуборд детский Burton After school SPE.jpg" />
+    <None Include="Resources\Сноуборд Termit Illusion.jpg" />
+    <None Include="Resources\Сноуборд Salomon Sight.jpg" />
+    <None Include="Resources\Сноуборд CAPITA HORRORSCOPE.jpg" />
+    <None Include="Resources\Коньки фигурные женские Nordway BELLA, 2020-21 размер 36-42.jpg" />
+    <None Include="Resources\Коньки фигурные Nordway Laval, 2020-21 размер 36-44 черные.jpg" />
+    <None Include="Resources\Коньки фигурные Graf ACE SPECIAL, 2020-21 размер 25-35.jpg" />
+    <None Include="Resources\Шайба хоккейная.jpg" />
+    <None Include="Resources\Шайба хоккейная детская.jpg" />
+    <None Include="Resources\Коньки хоккейные детские Nordway NDW350 JR размер 24-36.jpg" />
+    <None Include="Resources\Коньки хоккейные детские Bauer VAPOR X2.9, 2020-21 размер 36-38.jpg" />
+    <None Include="Resources\Коньки хоккейные Nordway NDW 700 SR, 2020-21 размер 39-46.jpg" />
+    <None Include="Resources\Коньки хоккейные Bauer VAPOR X2.9, 2020-21 размер 39-47.jpg" />
+    <None Include="Resources\Клюшка хоккейная детская Bauer VAPOR X2.7 GRIP.jpg" />
+    <None Include="Resources\Клюшка хоккейная детская Bauer S18 NEXUS N 2700.jpg" />
+    <None Include="Resources\Клюшка хоккейная Fischer CT150 CLEAR SR.jpg" />
+    <None Include="Resources\Клюшка хоккейная Bauer SUPREME 3S PRO GRIP.jpg" />
+    <None Include="Resources\Хокей.jpg" />
+    <None Include="Resources\Фигурное катание.jpg" />
+    <None Include="Resources\Сноубординг.jpg" />
+    <None Include="Resources\Горные лыжи.jpg" />
+    <None Include="Resources\Очки для плавания детские Speedo Jet V2 оранжевый синий.jpg" />
+    <None Include="Resources\Очки для плавания детские Speedo Futura Biofuse Flexiseal Mirror Junior зеленый фиолетовый.jpg" />
+    <None Include="Resources\Очки для плавания детские Speedo Biofuse Rift синий желтый.jpg" />
+    <None Include="Resources\Очки для плавания детские Joss розовый.jpg" />
+    <None Include="Resources\Очки для плавания Speedo черные.jpg" />
+    <None Include="Resources\Очки для плавания Speedo красные.jpg" />
+    <None Include="Resources\Очки для плавания Speedo Fut Biof синие.jpg" />
+    <None Include="Resources\Очки для плавания Joss желтый черный.jpg" />
+    <None Include="Resources\Очки для плавания Joss белые.jpg" />
+    <None Include="Resources\Очки для плавания FILA синие.jpg" />
+    <None Include="Resources\Шорты плавательные мужские Joss размер 46-58 цвет синий.jpg" />
+    <None Include="Resources\Шорты плавательные мужские FILA размер 46-56 цвет серый синий.jpg" />
+    <None Include="Resources\Шорты мужские Speedo Fitted размер 46-56 цвет голубой.jpg" />
+    <None Include="Resources\Плавки женские Joss размер 42-52 цвет бордо.jpg" />
+    <None Include="Resources\Лиф женский Termit размер 40-50 с принтом черный.jpg" />
+    <None Include="Resources\Лиф женский Protest Superbird размер 42-40 цвет белый черный.jpg" />
+    <None Include="Resources\Купальник женский Joss размер 42-54 черный с кружевом.jpg" />
+    <None Include="Resources\Купальник женский Joss размер 42-52 цвет черный, фиолетовый.jpg" />
+    <None Include="Resources\Купальник женский Joss размер 42-50 цвет черный.jpg" />
+    <None Include="Resources\Купальник женский FILA размер 42-52 синий.jpg" />
+    <None Include="Resources\Шорты неопреновые мужские Joss, 2 мм размер 44-54.jpg" />
+    <None Include="Resources\Куртка для сплава женская Hiko NIMUE Cag размер 48-54.jpg" />
+    <None Include="Resources\Гидрокостюм неопреновый мужской с капюшоном Joss, 5 мм размер 48-54.jpg" />
+    <None Include="Resources\Гидрокостюм неопреновый мужской Joss, 3 мм размер 42-54.jpg" />
+    <None Include="Resources\Гидрокостюм неопреновый короткий мужской Joss, 2,5 мм размер 48-54.jpg" />
+    <None Include="Resources\Гидрокостюм неопреновый короткий мужской Joss, 1,5 мм размер 48-54 цвет черный.jpg" />
+    <None Include="Resources\Гидрокостюм неопреновый короткий женский Joss, 1,5 мм размер 40-46.jpg" />
+    <None Include="Resources\Гидрокостюм неопреновый женский Joss, 3 мм размер 40-46.jpg" />
+    <None Include="Resources\Гидрокостюм мужской Termit размер 50-54, цвет черный.jpg" />
+    <None Include="Resources\Брюки для сплава Hiko SNAPPY 18 размер 48-54.jpg" />
+    <None Include="Resources\Лопатки для гребли Speedo Finger.jpg" />
+    <None Include="Resources\Лопатки для гребли Speedo Fastskin.jpg" />
+    <None Include="Resources\Лопатки для гребли Joss.jpg" />
+    <None Include="Resources\Ласты Speedo Training Fin размер 34-47.jpg" />
+    <None Include="Resources\Колобашка Joss.jpg" />
+    <None Include="Resources\Зажим для носа Speedo.jpg" />
+    <None Include="Resources\Доска для плавания Speedo.jpg" />
+    <None Include="Resources\Доска для плавания Joss.jpg" />
+    <None Include="Resources\Беруши Speedo Biofuse Aquatic Earplug.jpg" />
+    <None Include="Resources\Беруши Joss.jpg" />
+    <None Include="Resources\Очки для плавания.jpg" />
+    <None Include="Resources\Купальники.jpg" />
+    <None Include="Resources\Гидрокостюмы.jpg" />
+    <None Include="Resources\Аксессуары для павания.jpg" />
+    <None Include="Resources\Спортивный топ бра ASICS Logo размер 40-50 цвет розовый.jpg" />
+    <None Include="Resources\Спортивное бра Odlo Zaha размер 42-44 цвет черный.jpg" />
+    <None Include="Resources\Скакалка скоростная Torneo.jpg" />
+    <None Include="Resources\Палки для беговых лыж Nordway Active.jpg" />
+    <None Include="Resources\Липучки для беговых лыж Nordway цвет черный.jpg" />
+    <None Include="Resources\Кроссовки мужские Salomon XA Oribi размер 40-46.jpg" />
+    <None Include="Resources\Кроссовки мужские Nike Juniper Trail размер 40-46.jpg" />
+    <None Include="Resources\Крепления для беговых лыж Nordway 75 мм.jpg" />
+    <None Include="Resources\Крепления для беговых лыж Fischer WORLD CUP CLASSIC IFP %28Turnamic%29.jpg" />
+    <None Include="Resources\Ботинки для беговых лыж Madshus RACE PRO CLASSIC размер 38-48.jpg" />
+    <None Include="Resources\Трос силовой с легким сопротивлением SKLZ.jpg" />
+    <None Include="Resources\Трос силовой Demix.jpg" />
+    <None Include="Resources\Тренировочный парашют для бега SKLZ.jpg" />
+    <None Include="Resources\Ручки для силовых тросов Demix.jpg" />
+    <None Include="Resources\Ручка для одного силового троса SKLZ.jpg" />
+    <None Include="Resources\Петли для функционального тренинга Demix1.jpg" />
+    <None Include="Resources\Медицинбол Demix, 7 кг.jpg" />
+    <None Include="Resources\Медицинбол Demix, 3 кг.jpg" />
+    <None Include="Resources\Медицинбол Demix, 1 кг.jpg" />
+    <None Include="Resources\Крюки для турника и тяги Grozz.jpg" />
+    <None Include="Resources\Эспандер-лента SKLZ Bands Light.jpg" />
+    <None Include="Resources\Ремень для пауэрлифтинга с пряжкой Demix, %282 иглы%29.jpg" />
+    <None Include="Resources\Полотенце для йоги.jpg" />
+    <None Include="Resources\Петли для функционального тренинга Demix.jpg" />
+    <None Include="Resources\Набор мини лент Set of mini-tapes.jpg" />
+    <None Include="Resources\Мяч массажный Torneo цвет зеленый.jpg" />
+    <None Include="Resources\Манжеты для ног Demix.jpg" />
+    <None Include="Resources\Лента эластичная Elastic Band цвет желтый.jpg" />
+    <None Include="Resources\Лента силовая Demix цвет розовый.jpg" />
+    <None Include="Resources\Крепление на дверь Demix.jpg" />
+    <None Include="Resources\Мат для тренажеров Torneo цвет черный, зеленый.jpg" />
+    <None Include="Resources\Мат для йоги Kettler цвет черный, розовый.jpg" />
+    <None Include="Resources\Коврик для фитнеса SKLZ цвет серый.jpg" />
+    <None Include="Resources\Коврик для фитнеса Kettler цвет синий.jpg" />
+    <None Include="Resources\Коврик для фитнеса Demix цвет фиолетовый.jpg" />
+    <None Include="Resources\Коврик для фитнеса Demix цвет серый.jpg" />
+    <None Include="Resources\Коврик для тренажеров Torneo цвет серый.jpg" />
+    <None Include="Resources\Коврик для йоги Kettler цвет серый, желтый с принтом.jpg" />
+    <None Include="Resources\Коврик для йоги Demix цвет синий.jpg" />
+    <None Include="Resources\Коврик для йоги Demix цвет синий, желтый.jpg" />
+    <None Include="Resources\Силовая тренировка.jpg" />
+    <None Include="Resources\Кросс-тренинг.jpg" />
+    <None Include="Resources\Коврики и  маты.jpg" />
+    <None Include="Resources\Аксессуары для фитнеса.jpg" />
+    <None Include="Resources\Камера 11.jpg" />
+    <None Include="Resources\Тросик тормоза 1,5x2050 мм, FX-BC-012, головка 7х6мм для велосипеда.jpg" />
+    <None Include="Resources\Камера 1.jpg" />
+    <None Include="Resources\Съёмник каретки STG YC-26BB для Shimano для велосипеда1.jpg" />
+    <None Include="Resources\Цепь 5,6,7 скоростей HC-PJ-148A, 1 2x3 32x116L, 116 звеньев.jpg" />
+    <None Include="Resources\Съёмник каретки STG YC-26BB для Shimano для велосипеда.jpg" />
+    <None Include="Resources\Смазка для велосипедных цепей Dream bike, 120 мл.jpg" />
+    <None Include="Resources\Седло A06 260 240 мм.jpg" />
+    <None Include="Resources\Грипсы 120 мм TY-NO-9097.jpg" />
+    <None Include="Resources\Втулка передняя 36 отв., FAT BIKE, алюминий, под диск 6 болтов,.jpg" />
+    <None Include="Resources\Болт оси каретки под торцевой ключ, М8х16мм велосипедный.jpg" />
+    <None Include="Resources\Направляющая для тормоза V-brake для велосипеда.jpg" />
+    <None Include="Resources\Защита колен Dainese TRAIL SKINS PRO цвет черный.jpg" />
+    <None Include="Resources\Шлем велосипедный Uvex quatro цвет зеленый.jpg" />
+    <None Include="Resources\Шлем велосипедный Stern.jpg" />
+    <None Include="Resources\Шлем велосипедный Stern цвет черный, зеленый.jpg" />
+    <None Include="Resources\Футболка мужская Dainese цвет черный размер 44-50.jpg" />
+    <None Include="Resources\Перчатки велосипедные Cyclotech PILOT.jpg" />
+    <None Include="Resources\Набор защиты REACTION для велосипедиста.jpg" />
+    <None Include="Resources\Джерси мужское Dainese цвнт черный, белый, голубой размер 46-50.jpg" />
+    <None Include="Resources\Джерси Dainese Otzarreta цвет серый, оранжевый размер 46-50.jpg" />
+    <None Include="Resources\Велошорты Dainese цвет черный размер 44-46.jpg" />
+    <None Include="Resources\Велосипед Skif 29 Disc %282021%29.jpg" />
+    <None Include="Resources\Велосипед Skif 26 Disc %282021%29.jpg" />
+    <None Include="Resources\Велосипед Foxx Aztec D 29 %282021%29.jpg" />
+    <None Include="Resources\Велосипед Foxx Aztec D 27.5 %282021%29.jpg" />
+    <None Include="Resources\Велосипед Foxx Aztec 29.jpg" />
+    <None Include="Resources\Велосипед Foxx Atlantic 26 %282021%29.jpg" />
+    <None Include="Resources\Велосипед Black One Onix 26 %282021%29.jpg" />
+    <None Include="Resources\Велосипед Black One Element 26 D %282021%29.jpg" />
+    <None Include="Resources\Велосипед Altair MTB HT 29 2.0 Disc %282021%29.jpg" />
+    <None Include="Resources\Экипировка.jpg" />
+    <None Include="Resources\Велозапчасти.jpg" />
+    <None Include="Resources\bike.jpg" />
+    <None Include="Resources\Wintersport.jpg" />
+    <None Include="Resources\Watersport.jpg" />
+    <None Include="Resources\Fitnes.jpg" />
+    <None Include="Resources\Bikesport.jpg" />
+    <None Include="Resources\Жен. Платья ТВОЕ на запах, длина мини, принт горох, цвет красный, белый, размер 42-50, ткань вискоза.jpg" />
+    <None Include="Resources\Жен. Платья ТВОЕ мини без застежки вырез кармен, цвет белый, размер 42-50, ткань вискоза.jpg" />
+    <None Include="Resources\Жен. Платья ТВОЕ длина миди на запах, принт горох, цвет черный, молочный, размер 42-50, ткань полиэстер.jpg" />
+    <None Include="Resources\Жен. Платья Полинушка льняное платье Вереск, а-силуэт, цвет темно-синий, размер 42-50, ткань лен.jpg" />
+    <None Include="Resources\Жен. Платья НАТАЛИ полуприлигающий силуэт с капюшоном, длина макси, цвет хаки, размер 48-56, ткань хлопок.jpg" />
+    <None Include="Resources\Жен. Платья ZAVI, цвет темно-синий.jpg" />
+    <None Include="Resources\Жен. Платья SELA длинное из хлопковой ткани длина макси, цвет черный, размер 42-50.jpg" />
+    <None Include="Resources\Жен. Платья Revee с открытой спиной мини, цвет черный, размер 40-48, ткань вискоза, полиэстер, эластан.jpg" />
+    <None Include="Resources\Жен. Платья Envy Lab платье-рубашка в полоску, цвет синий, белый, размер 40-58, ткань хлопок.jpg" />
+    <None Include="Resources\Жен. Платья A.Karina на запах миди в горох, цвет темно-синий, размер 42-54, ткань вискоза, полиэстер.jpg" />
+    <None Include="Resources\Жен. Трусы ТВОЕ набор 7 шт. цвета зеленый, голубой, серый, светло-синий, желтый, темно-серый, ткань хлопок, эластан, размер 42-50.jpg" />
+    <None Include="Resources\Жен. Трусы VISSON слипы с высокой посадкой, цвет черный, размер 44-58, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Жен. Трусы Minimi слипы классические, цвет черный, размер 42-54, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Жен. Трусы Meribel слипы с высокой посадкой, цвет бежевый, размер 46-54, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Жен. Трусы FILETTO слипы с кружевом, цвет черный, размер 44-50, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Жен. Корсаж OPIUM полностью расшит мелкими пайетками, цвет светло-бежевый, золотистый, размер 42-50, ткань полиэстер, эластан.jpg" />
+    <None Include="Resources\Жен. Бюстье Mad Le Mon бюстгальтер спортивный без косточек, цвет кофейный, размер 42-46, ткань полиамид, спандекс.jpg" />
+    <None Include="Resources\Жен. Бюстье KARNELIA топ кружевной, цвет белый, размер 42-46, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Жен. Бюстгальтер voluptina без бретелей, размер 70В-105Н, цвет черный, ткань нейлон, спандекс.jpg" />
+    <None Include="Resources\Жен. Бюстгальтер La Dea кружевное с мягкой чашкой, цвет черный, размер 70В-80С, ткань полиамид. полиэстер, эластан, хлопок.jpg" />
+    <None Include="Resources\Жен. Леггинсы Эйфория спортивные, цвет черный, размер 40-50, ткань полиамид, эластан.jpg" />
+    <None Include="Resources\Жен. Леггинсы Yuki с высокой талией, цвет темно-серые, размеры 40-46, ткань нейлон, полиэстер, спандекс.jpg" />
+    <None Include="Resources\Жен. Леггинсы oodji, цвет черные, размер 40-52, ткань хлопок, полеуретан.jpg" />
+    <None Include="Resources\Жен. Леггинсы Gardiani высокая посадка, для спорта, для дома, цвет черные, размер 40-48, ткань полиэстер, эластан.jpg" />
+    <None Include="Resources\Жен. Леггинсы Bona Fide спортивные, цвет черный, ткань нейлон, спандекс, размер 42-48.jpg" />
+    <None Include="Resources\Жен. Брюки ТВОЕ широкие, цвет черный, белый, ткань хлопок, полиэстер, размер 42-50.jpg" />
+    <None Include="Resources\Жен. Брюки Зари спортивные, широкие, цвет черный, светло-зеленый, размер 40-54, ткань хлопок, полиэстер.jpg" />
+    <None Include="Resources\Жен. Брюки Зари джоггеры домашние, размер 40-58, цвет черные, ткань хлопок, полиэстер.jpg" />
+    <None Include="Resources\Жен. Брюки Sakha укороченные прямые, цвет бежевый, размер 48-62, ткань вискоза полиэстер.jpg" />
+    <None Include="Resources\Жен. Брюки emse прямые клеш, цвет черный, размер 40-52, ткань полиэстер.jpg" />
+    <None Include="Resources\Жен. Джинсы ТВОЕ скинни, цвет голубой, размер 42-50, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Жен. Джинсы Zolla бойфренты, цвет светло-голубой, размер 40-46, ткань хлопок, полиэстер, эластан.jpg" />
+    <None Include="Resources\Жен. Джинсы Zolla бойфренды, цвет голубой, размер 40-52, ткань хлопок, полиэстер, эластан.jpg" />
+    <None Include="Resources\Жен. Джинсы Nicole Ferro бананы, цвет голубой, ткань хлопок, полиэстер, спандекс, размер 40-62.jpg" />
+    <None Include="Resources\Жен. Джинсы Mango зауженные, цвет светло-голубой, размер 38-50, ткань хлопок, хлопок переработанный.jpg" />
+    <None Include="Resources\Жен. Джинсы Feliamo трубы, клеш, цвет небесно-голубой, бледно-голубой, размер 40-46, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Жен. Джинсы ArtTimes трубы, цвет черный, размер 40-48, ткань хлопок.jpg" />
+    <None Include="Resources\Жен. Джинсы aliber скинни, цвет черный, размер 38-52, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Жен. Джинсы ADDPRO багги, баллоны, цвет синий, размер 40-46, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Жен. Худи ТВОЕ утепленный, цвет темно-бордовый, размер 42-50, ткань хлопок, полиэстер.jpg" />
+    <None Include="Resources\Жен. Худи ТВОЕ утепленное, цвет бежевый, размеры 42-48, ткань хлопок, полиэстер.jpg" />
+    <None Include="Resources\Жен. Худи Raven, оверсайз с начесом, цвет терракотовый, размер 46-54, ткань хлопок, полиэстер.jpg" />
+    <None Include="Resources\Жен. Худи Feelz с принтом и капюшоном, оверсайз, цвет лиловый, ткань хлопок, полиэстер.jpg" />
+    <None Include="Resources\Жен. Худи Barmariska Тай Дай, цвет графит, серый, размер 36-54, ткань хлопок.jpg" />
+    <None Include="Resources\Жен. Свитшот ТВОЕ укороченный, цвет белый, размер 42-50, ткань хлопок.jpg" />
+    <None Include="Resources\Жен. Свитшот Zarina, цвет лайм, размер 42-50, ткань хлопок.jpg" />
+    <None Include="Resources\Жен. Свитшот SELA со светоотражающим принтом, цвет черный, размер 42-50, ткань хлопок, полиэстер.jpg" />
+    <None Include="Resources\Жен. Свитшот Comodita джемпер оверсайз, цвет голубой, размеры 42-50, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Жен. Топ-бра SoulWear спортивный, цвет белый, размеры 42-46, ткань полиамид, эластан.jpg" />
+    <None Include="Resources\Жен. Топ трик. oodji, цвет черный, ткань хлопок, размеры 40-52.jpg" />
+    <None Include="Resources\Жен. Топ TALIA укороченный на широких бретелях, цвет черный, размер 40-48, ткань полиэстер, вискоза, эластан.jpg" />
+    <None Include="Resources\Жен. Топ oodji, цвет серый, размер 40-52, ткань полиэстер, вискоза, полиуретан.jpg" />
+    <None Include="Resources\Жен. Топ MROSE на бретельках, цвет черный, размеры 40-46, ткань нейлон-спандекс.jpg" />
+    <None Include="Resources\Жен. Топ Gloria Jeans, цвет желтый, размер 38-50, ткань полиамид, спандекс.jpg" />
+    <None Include="Resources\Жен. Топ FIFFO американка с леопардовым принтом, размер 42-52, цвет черный, бежевый, ткань полиэстер, вискоза, эластан.jpg" />
+    <None Include="Resources\Жен. Топ Bona Fide, цвет черный, размер 42-48, ткань нейлон, спандекс.jpg" />
+    <None Include="Resources\Жен. Топ AnnaLizza укороченный, цвет черный, размеры 40-48, ткань полиэстер, вискоза, эластан.jpg" />
+    <None Include="Resources\Жен. Топ AnnaLizza топ бельевой, цвет молочный, ткань полиэстер, эластан, размер 38-52.jpg" />
+    <None Include="Resources\Платья1.jpg" />
+    <None Include="Resources\Нижнее белье женское1.jpg" />
+    <None Include="Resources\Женские худи и свитшоты1.jpg" />
+    <None Include="Resources\Джинсы женские1.jpg" />
+    <None Include="Resources\Брюки и чиносы женские1.jpg" />
+    <None Include="Resources\Топы.jpg" />
+    <None Include="Resources\Платья.jpg" />
+    <None Include="Resources\Нижнее белье женское.jpg" />
+    <None Include="Resources\Женские худи и свитшоты.jpg" />
+    <None Include="Resources\Джинсы женские.jpg" />
+    <None Include="Resources\Брюки и чиносы женские.jpg" />
+    <None Include="Resources\Муж. Трусы ТВОЕ набор боксеры 2 шт., цвет, белый, серый, размеры 46-54, ткань полиэстер, хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Трусы ТВОЕ боксеры, 2 шт., размеры 46-54, цвет черные, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Трусы ТВОЕ боксеры набор 2 шт., цвет красный, серый, размеры 46-54, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Трусы QUTEX набор боксеры 4 шт., цвет черный, синий, бордовый, серый меланж, размеры 46-60, ткань хлопок.jpg" />
+    <None Include="Resources\Муж. Трусы PossRis боксеры набор 5 шт. цвет черный, красный, размеры 44-56, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Трусы OMSA набор слипы 3 шт., цвет черный, темно-синий, серый меланж, размеры 44-54, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Трусы MiiOW боксеры, набор 4 шт., цвет черный, темно-синий, темно-зеленый, темно-серый, размеры 40-52, ткань модал, спандекс.jpg" />
+    <None Include="Resources\Муж. Трусы Marks &amp; Spencer боксеры, набор 5 шт., цвет темно-синий, синий, серый, красный, белый, размеры 46-60, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Трусы BOKAI боксеры, набор комплект 4 шт. размеры 46-54, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Трусы  NOSOCKS! набор боксеры 3 шт., цвет черный, фиолетовый, размеры 44-58, ткань хлопок, полиэстер, эластан.jpg" />
+    <None Include="Resources\Муж. Брюки УзМультиБренд джоггеры спортивные, цвет камуфляж, хаки, ткань хлопок , полиэстер, размеры 48-56.jpg" />
+    <None Include="Resources\Муж. Брюки Зари спортивные, цвет церный, размер 46-56, ткань хлопок, полиэстер, эластан.jpg" />
+    <None Include="Resources\Муж. Брюки Зари с лампасом, цвет черный, желто-оранжевый, размеры 46-54, ткань хлопок, полиэстер, эластан.jpg" />
+    <None Include="Resources\Муж. Брюки Бест Трикотаж, брюки с накладными карманами, цвет черный, размеры 48-56, ткань хлопок, полиэстер.jpg" />
+    <None Include="Resources\Муж. Брюки Бест Трикотаж спортивные, цвет темно-синий, джинсовый, размеры 48-56, ткань хлопок, полиэстер.jpg" />
+    <None Include="Resources\Муж. Брюки Yolo джоггеры мужские, цвет черный, размеры 46-54, ткань хлопок, полиэстер.jpg" />
+    <None Include="Resources\Муж. Брюки Turon спортивные, цвет черый, белый, размеры 46-56, ткань хлопок, полиэстер.jpg" />
+    <None Include="Resources\Муж. Брюки Sun Street джоггеры, цвет бежевый.jpg" />
+    <None Include="Resources\Муж. Брюки LAINA прямые, спортивные, цвет черный, размер 46-54, ткань хлопок, полиэстер, эластан.jpg" />
+    <None Include="Resources\Муж. Брюки Bronks, цвет зеленый, хаки , размеры 38-60, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Джинсы зауженные Nescoly, цвет темно-синие, размеры 46-56, ткань хлопок, эластан1.jpg" />
+    <None Include="Resources\Муж. Джинсы бананы KENSPRIT, цвет синие, размеры 38-56, ткань хлопок1.jpg" />
+    <None Include="Resources\Муж. Джинсы ТВОЕ, цвет черные, размеры 46-54, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Джинсы ТВОЕ , цвет синие, размер 46-54, ткань хлопок.jpg" />
+    <None Include="Resources\Муж. Джинсы зауженные Nescoly, цвет темно-синие, размеры 46-56, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Джинсы бананы KENSPRIT, цвет синие, размеры 38-56, ткань хлопок.jpg" />
+    <None Include="Resources\Муж. Джинсы Texas Wrangler, цвет синий, размеры 46-48, ткань хлопок.jpg" />
+    <None Include="Resources\Муж. Джинсы slim GAP, цвет светло-синие, размеры 46-56, ткань хлопок, полиэстер, вискоза, эластан.jpg" />
+    <None Include="Resources\Муж. Джинсы Mango Man, цвет черные, размер 42-50, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Джинсы Katebi, цвет темно-синие, размер 46-50, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Джинсы Fashion, цвет синие, размеры 48-56, ткань хлопок.jpg" />
+    <None Include="Resources\Муж. Рубашка ЭЛИЗА в клетку с длинным рукавом, цвет черно-красная, размеры 46-54, ткань хлопок.jpg" />
+    <None Include="Resources\Муж. Рубашка ТВОЕ, цвет черная, размеры 46-54, ткань вискоза.jpg" />
+    <None Include="Resources\Муж. Рубашка Zolla, цвет голубой, размеры 48-56, ткань хлопок.jpg" />
+    <None Include="Resources\Муж. Рубашка Stronger в клетку, цвет бело-зеленый, размеры 48-58, ткань хлопок.jpg" />
+    <None Include="Resources\Муж. Рубашка oodji, цвет бежевый, размеры 46-58, ткань лен, хлопок.jpg" />
+    <None Include="Resources\Муж. Рубашка MEXX, цвет хаки, размеры 46-56, ткань хлопок, лен.jpg" />
+    <None Include="Resources\Муж. Рубашка Club ATZ в комплекте с запонками, цвет голубой, размеры 44-52, ткань хлопок, лайкра.jpg" />
+    <None Include="Resources\Муж. Рубашка Brostem, цвет белая, размеры 46-56, ткань хлопок, модал.jpg" />
+    <None Include="Resources\Муж. Рубашка Befree, рубашка вискозная с коротким рукавом и принтом, цвет черно-белый, размеры 46-52, ткань вискоза.jpg" />
+    <None Include="Resources\Муж. Рубашка Bawer, цвет белая, размеры 44-52, ткань хлопок, вискоза.jpg" />
+    <None Include="Resources\Муж. Худи ТВОЕ, цвет черный, размеры 44-52, ткань, хлопок.jpg" />
+    <None Include="Resources\Муж. Худи ТВОЕ, цвет светло-серый, размеры 46-54, ткань, хлопок, полиэстер.jpg" />
+    <None Include="Resources\Муж. Худи Макс-Экстрим, цвет хаки, размер 42-50, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Худи RAVEN, цвет черный, размер оверсайз, ткань хлопок, полиэстер.jpg" />
+    <None Include="Resources\Муж. Худи Adidas, цвет темно-синий, размер 40-58, ткань хлопок, полиэстер, модал.jpg" />
+    <None Include="Resources\Муж. Свитшот ТВОЕ, цвет фиолетовый, размеры 46-54, ткань хлопок.jpg" />
+    <None Include="Resources\Муж. Свитшот ТВОЕ Экоколлекция, цвет белый, размер 46-54, ткан хлопок.jpg" />
+    <None Include="Resources\Муж. Свитшот ТВОЕ Tom &amp; Jerri, цвет черный, размер 46-54, ткань хлопок, полиэстер.jpg" />
+    <None Include="Resources\Муж. Свитшот Своя Культура, цвет черный, размеры 46-54, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Футболка ТВОЕ, цвет черная, размеры 46-54, ткань хлопок.jpg" />
+    <None Include="Resources\Муж. Футболка ТВОЕ, цвет белая, размеры 46-54, ткань хлопок.jpg" />
+    <None Include="Resources\Муж. Футболка Смешные цены, Темно-синяя, размеры 48-56, ткань хлопок.jpg" />
+    <None Include="Resources\Муж. Футболка Макс-Экстрим, цвет белый, размеры 44-58, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Футболка Uzcotton, белая, размер 40-48, ткань хлопок.jpg" />
+    <None Include="Resources\Муж. Футболка Turon, цвет белый, размеры 48-56, ткань хлопок.jpg" />
+    <None Include="Resources\Муж. Футболка Print Bar, цвет черно-белая, размеры 44-58, ткань полиэстер.jpg" />
+    <None Include="Resources\Муж. Футболка MF, цвет белая, размеры 44-62, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Футболка Envy Lab, цвет черный, размер 40-54, ткань хлопок, эластан.jpg" />
+    <None Include="Resources\Муж. Футболка Adidas, цвет черный, размеры 40-62, ткань хлопок.jpg" />
+    <None Include="Resources\Нижнее белье мужское.jpg" />
+    <None Include="Resources\Джинсы мужские.jpg" />
+    <None Include="Resources\Брюки и чиносы мужские.jpg" />
+    <None Include="Resources\Рубашки мужские.jpg" />
+    <None Include="Resources\Худи и свитшоты мужские.jpg" />
+    <None Include="Resources\Футболки и майки мужские.jpg" />
+    <None Include="Resources\Clothes_Woman2.jpg" />
+    <None Include="Resources\Clothes_Man2.jpg" />
+    <None Include="Resources\Clothes_Man.jpg" />
+    <None Include="Resources\Жен. Часы наручные GUESS цвет черный, серебристый,  стекло минеральное, ремешок кожа, форма круглая.jpg" />
+    <None Include="Resources\Жен. Часы наручные GUESS цвет стальной, желтое золото, стекло минеральное, нержавеющая сталь, стиль модельные.jpg" />
+    <None Include="Resources\Жен. Часы наручные GUESS цвет серебристый, красный, стекло минеральное, нержавеющая сталь.jpg" />
+    <None Include="Resources\Жен. Часы наручные GUESS цвет серебристый,  стекло минеральное, нержавеющая сталь.jpg" />
+    <None Include="Resources\Жен. Часы наручные GUESS цвет серебристый,  стекло минеральное, нержавеющая сталь, стиль модельные.jpg" />
+    <None Include="Resources\Жен. Часы наручные GUESS цвет серебристый,  стекло минеральное, нержавеющая сталь, без декоративных элементов.jpg" />
+    <None Include="Resources\Жен. Часы наручные GUESS цвет розовый, белый,  стекло минеральное, ремешок силикон, форма круглая.jpg" />
+    <None Include="Resources\Жен. Часы наручные GUESS цвет золотистый, стекло минеральное, нержавеющая сталь, модельные, механизм кварцевые.jpg" />
+    <None Include="Resources\Жен. Часы наручные GUESS цвет золотистый,  стекло минеральное, ремешок силикон, форма круглая.jpg" />
+    <None Include="Resources\Жен. Часы наручные GUESS цвет золотистый,  стекло минеральное, нержавеющая сталь, стиль модельные.jpg" />
+    <None Include="Resources\Жен. Солнцезащитные очки Polaroid цвет черный, оправа прямоугольная, линзы пластиковые.jpg" />
+    <None Include="Resources\Жен. Солнцезащитные очки Polaroid цвет черный, оправа круглая, линзы пластиковые.jpg" />
+    <None Include="Resources\Жен. Солнцезащитные очки Polaroid цвет черный, оправа кошачий глаз, линзы пластиковые.jpg" />
+    <None Include="Resources\Жен. Солнцезащитные очки Polaroid цвет фиолетово-баклажанный, оправа квадратная, линзы пластиковые.jpg" />
+    <None Include="Resources\Жен. Солнцезащитные очки Polaroid цвет синий, оправа кошачий глаз, линзы пластиковые.jpg" />
+    <None Include="Resources\Жен. Солнцезащитные очки Polaroid цвет серый, оправа прямоугольная, линзы пластиковые.jpg" />
+    <None Include="Resources\Жен. Солнцезащитные очки Polaroid цвет серый, оправа квадратная, линзы пластиковые.jpg" />
+    <None Include="Resources\Жен. Солнцезащитные очки Polaroid цвет розовый, оправа круглая, линзы пластиковые.jpg" />
+    <None Include="Resources\Жен. Солнцезащитные очки Polaroid цвет коричневый, оправа квадратная, линзы пластиковые.jpg" />
+    <None Include="Resources\Жен. Солнцезащитные очки Exenza CAMPANELLA, цвет черный, светло-серый, оправа кошачий глаз,.jpg" />
+    <None Include="Resources\Черный ремень Monel с застежкой в стиле Гуччи, цвет черный золотистый, экокожа.jpg" />
+    <None Include="Resources\Ремень пояс кушак широкий BOX STYLE повязывается узлом ремень петля, ремень без пряжки, искусственная кожа.jpg" />
+    <None Include="Resources\Ремень женский с люверсами в два ряда и цепочкой Alex Svar, ширина 3 см., цвет черный, серебристый.jpg" />
+    <None Include="Resources\Ремень женский GUESS, цвет коричневый, состав полеуретан, Италия, размеры 80-100.jpg" />
+    <None Include="Resources\Жен. Ремень с люверсами SKORS  черный из экокожи, длина 9 см.jpg" />
+    <None Include="Resources\Жен. Ремень Urside, цвет белый, размер 100-120, искусственная кожа.jpg" />
+    <None Include="Resources\Жен. Ремень Pinko, цвет черный, белый, натуральная кожа, размер 90-110.jpg" />
+    <None Include="Resources\Жен. Ремень CHROME из натуральной кожи классический, цвет белый, ширина 3,5 см.jpg" />
+    <None Include="Resources\Жен. Классический ремень из натуральной кожи с гладкой повехностью, цвет черный.jpg" />
+    <None Include="Resources\Чокер на шею из жемчуга PANI MILA ювелирное колье натуральный камень, ожерелье с подвеской, цвет молочный, вес 9,65 г.jpg" />
+    <None Include="Resources\Подвеска на леске хо.хо, длина 40 см. подвеска страза, цвет серебристый.jpg" />
+    <None Include="Resources\Подвеска YAVIKA кулон на цепочку, крест тонкий с фианитами, оригинальная, медицинский сплав фианиты, размер 2,1х1,5 см. толщина 1 мм.jpg" />
+    <None Include="Resources\Пирсинг PINME кольцо-кликер 0,8 мм., серьга из стали для пирсинга септума, крыло носа, уха, губ, брови.jpg" />
+    <None Include="Resources\Кольцо двойное Sapho, цвет серебристый, золотистый, сплав латунь, вес 6,1 г. ширина 11,0 мм.jpg" />
+    <None Include="Resources\Колье оригинальная слоеная цепочка на шею ViLeSA, длина 46-53 см. ширина плетения 2 см., цвет золотистый.jpg" />
+    <None Include="Resources\Бусы Янтарная Фея, цвет черный, темно-коричневый, светло-коричневый, молочный, лимонный, замок винтовой.jpg" />
+    <None Include="Resources\Брошь Ведьмочка на метле Miss Mia, цвет серебристыый золотистый, булавка.jpg" />
+    <None Include="Resources\Браслет ViLeSA женский браслет с круглым кулоном, цвет золотистый, длина 19 см.jpg" />
+    <None Include="Resources\Браслет LN ONE из натурального белого жемчуга, цвет молочный, без замка.jpg" />
+    <None Include="Resources\Ободок Хвостики Косички для волос из эко-кожи, цвет черный.jpg" />
+    <None Include="Resources\Набор резинок Мимимишкина радость 70 шт. детские, цвет фиолетовый желый.jpg" />
+    <None Include="Resources\Крабики для волос набор 20 шт. Just Like, цвет черный.jpg" />
+    <None Include="Resources\Заколки комплект 2 шт. с жемчугом StyleBox, цвет молочный, высота 8 см. ширина 2 см.jpg" />
+    <None Include="Resources\Заколка для волос Французский бант 7Sentido, цвет белый, высота 12 см. ширина 16 см.jpg" />
+    <None Include="Resources\Зажим Royal Rose , набор 12 шт. цвета желтый, розовая фуксия.jpg" />
+    <None Include="Resources\Диадема TwoG свадебная, украшение на голову, цвет серебристый, высота посередине 35 мм. по краям 20 мм.jpg" />
+    <None Include="Resources\Гребень Нежность Miss Mia для свадьбы, цвет серебристый, размер 44 см.jpg" />
+    <None Include="Resources\Бублик для волос НАВ, маленький 2 шт., цвет бежевый, материал нейлон.jpg" />
+    <None Include="Resources\Бант для волос Alona заколка автомат, цвет белый, атлас.jpg" />
+    <None Include="Resources\Clock_Woman.jpg" />
+    <None Include="Resources\SunGlasses_Woman.jpg" />
+    <None Include="Resources\Belts_Woman.jpg" />
+    <None Include="Resources\Deractiong.jpg" />
+    <None Include="Resources\Hiar_Acessesories.jpg" />
+    <None Include="Resources\Аcessesories_Woman2.jpg" />
+    <None Include="Resources\Аcessesories_Woman.jpg" />
+    <None Include="Resources\Электронные наручные часы LIUBOV, браслет металлический сплав, механизм электронные, цвет золотистый.jpg" />
+    <None Include="Resources\Часы наручные CASIO, электронные часвы, браслет сталь, цвет серебристый.jpg" />
+    <None Include="Resources\Часы наручные NAVIFORCE, цвет синий серебристый, стекло минеральное, браслет нержавеющая сталь.jpg" />
+    <None Include="Resources\Часы наручные SKMEI, водонепроницаемые спортивны, цвет черный синий, стекло ударопрочный пластик.jpg" />
+    <None Include="Resources\Муж. часы I-Goods водонепроницаемые, цвет черные, электронные.jpg" />
+    <None Include="Resources\Часы наручные Sinobi, цвет черный белый, стекло минеральное.jpg" />
+    <None Include="Resources\Часы Нестеров, цвет темно-синий, серебристый, стекло минеральное, браслет кожа, водостойкие, кварцевые.jpg" />
+    <None Include="Resources\Наручные часы Guess, цвет серебристый, нержавеющая сталь, миханизм часов кварцевые, вид стекла минеральное.jpg" />
+    <None Include="Resources\Часы наручные Time Shop, в коробке.jpg" />
+    <None Include="Resources\Часы наручные Alexander Diagan, цвет черный, нержавеющая сталь, с автоматическим механизмом.jpg" />
+    <None Include="Resources\Солнцезащитные очки Ray Ban, страна Италия, оправа пластик, линзы пластик.jpg" />
+    <None Include="Resources\Солнцезащитные очки Polaroid, цвет черный, оправа квадратная, ацетат, пластиковые линзы.jpg" />
+    <None Include="Resources\Солнцезащитные очки Polaroid, цвет черный, оправа круглая, металл, пластиковые линзы.jpg" />
+    <None Include="Resources\Солнцезащитные очки Yolo, цвет черный матовый, оправа круглая.jpg" />
+    <None Include="Resources\Солнцезащитные очки спортивные GINO GIRALDI Sport цвет темно-серый, желтый, оправа спортивная.jpg" />
+    <None Include="Resources\Солнцезащитные очки Polaroid, цвет черные, оправа авиатор, пластиковые линзы.jpg" />
+    <None Include="Resources\Солнцезащитные очки Polaroid, цвет черный, оправа ретро, пластиковые линзы.jpg" />
+    <None Include="Resources\Мужские очки KEDDO, цвет коричневые, пластик металл.jpg" />
+    <None Include="Resources\Солнцезащитные очки Original Cat-Eye %280-2%29 Babiators, цвет черные.jpg" />
+    <None Include="Resources\Солнцезащитные очки Solar Vision, цвет черные, оправа металл.jpg" />
+    <None Include="Resources\Галстук GENTLETEAM классический из шерсти, серый однотонный, длина 150 см.jpg" />
+    <None Include="Resources\Галстук Bardo.jpg" />
+    <None Include="Resources\Галстук Bolset.jpg" />
+    <None Include="Resources\Галстук Mason Grace.jpg" />
+    <None Include="Resources\Галстук ШопоГолик.jpg" />
+    <None Include="Resources\Галстук Marks &amp; Spencer.jpg" />
+    <None Include="Resources\Галстук классический BLACKBOW.jpg" />
+    <None Include="Resources\Галстук школьный KADET.jpg" />
+    <None Include="Resources\Галстук Роскошь изгнания Signature.jpg" />
+    <None Include="Resources\Галстук Ten amo.jpg" />
+    <None Include="Resources\Муж. Ремень Malgrado.jpg" />
+    <None Include="Resources\Муж. Ремень Boro Boro.jpg" />
+    <None Include="Resources\Муж. Ремень Mr. Belt.jpg" />
+    <None Include="Resources\Муж. Ремень KIN FASHION.jpg" />
+    <None Include="Resources\Муж. Ремень KREPKO.jpg" />
+    <None Include="Resources\Муж. Ремень Rizziano.jpg" />
+    <None Include="Resources\Ремень Tenkraft.jpg" />
+    <None Include="Resources\Муж. Ремень GOOD PRICE.jpg" />
+    <None Include="Resources\Муж. Ремень REMBINI.jpg" />
+    <None Include="Resources\Муж. Ремень REMBIN.jpg" />
+    <None Include="Resources\Clock_Man.jpg" />
+    <None Include="Resources\SunGlasses.jpg" />
+    <None Include="Resources\Neckties.jpg" />
+    <None Include="Resources\Belts.jpg" />
+    <None Include="Resources\Муж. Портмоне SAAJ, натуральная кожа.jpg" />
+    <None Include="Resources\Портмоне HENDERSON, натуральная кожа.jpg" />
+    <None Include="Resources\Муж. портмоне Malgrado.jpg" />
+    <None Include="Resources\Кошелек ManType, кожа, цвет черный.jpg" />
+    <None Include="Resources\Кошелек Forte универсальный с евромонетником.jpg" />
+    <None Include="Resources\Кошелек Esse натуральная кожа.jpg" />
+    <None Include="Resources\Кошелек Malgrado натуральная кожа.jpg" />
+    <None Include="Resources\Кошелек Barouz из натуральной кожи.jpg" />
+    <None Include="Resources\Кошелек DuDu серии Flavio.jpg" />
+    <None Include="Resources\Кошелек QNEX кожанный цвет черный.jpg" />
+    <None Include="Resources\Wallets.jpg" />
+    <None Include="Resources\Аcessesories.jpg" />
+    <None Include="Resources\Pants.jpg" />
+    <None Include="Resources\Bow.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
