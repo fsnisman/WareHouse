@@ -17,7 +17,7 @@ namespace InternetStore
         //
         //Иницилизация бд
         //
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\c#\InternetStore\InternetStore\InternetStore\DBInternetStore.mdf;Integrated Security=True");//подключение к бд
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|DBInternetStore.mdf;Integrated Security=True");//подключение к бд
         SqlDataAdapter adapter = null;
         SqlCommandBuilder sqlBuilder = null;
         DataSet dataSet = null;
